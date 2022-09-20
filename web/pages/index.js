@@ -29,7 +29,7 @@ export default function Home() {
 
       <div className='border border-black flex flex-col gap-4 py-4'>
 
-        <p className='flex flex-col px-4 text-xs border text-black border-black py-2 mx-4 h-10 items-center justify-center rounded-lg'>Calendrier de l'année {date.getFullYear().toString()} - {(date.getFullYear()+1).toString()}</p>
+        <p className='flex flex-col px-4 text-xs border text-black border-black py-2 mx-4 h-10 items-center justify-center rounded-lg'>Calendrier de l&apos;année {date.getFullYear().toString()} - {(date.getFullYear()+1).toString()}</p>
 
         <div className={`grid grid-cols-7 px-4 gap-4 text-black text-center`}>
 
