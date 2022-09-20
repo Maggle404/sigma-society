@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import AppBar from '../components/AppBar'
+import Footer from '../components/Footer';
 
 export default function Home() {
 
@@ -21,38 +22,42 @@ export default function Home() {
 
       <AppBar/>
 
-      <div className="flex flex-col h-[60vh] bg-[url('/img/368947.webp')] bg-cover bg-center">
-
-        <p></p>
+      <div className="flex flex-col h-[60vh] bg-[url('/img/368947.webp')] bg-cover bg-center items-center justify-center">
+        
+        <div className='flex flex-col text-sm bg-white rounded-lg py-2 px-4'>
+          <p>Nous sommes clairement le meilleur BDE.</p>
+          <p>Et voila pourquoi.</p>
+        </div>
 
       </div>
 
       <div className='border border-black flex flex-col gap-4 py-4'>
 
-        <p className='flex flex-col px-4 text-xs border text-black border-black py-2 mx-4 h-10 items-center justify-center rounded-lg'>Calendrier de l&apos;année {date.getFullYear().toString()} - {(date.getFullYear()+1).toString()}</p>
+        <p className='flex flex-col px-4 text-xs border text-black border-black py-2 mx-4 items-center justify-center rounded-lg h-14'>Calendrier de l&apos;année {date.getFullYear().toString()} - {(date.getFullYear()+1).toString()}</p>
 
         <div className={`grid grid-cols-7 px-4 gap-4 text-black text-center`}>
 
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Lundi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Mardi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Mercredi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Jeudi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Vendredi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Samedi</div>
-          <div className='flex flex-col text-xs border border-black py-2 px-4 rounded-lg h-10 items-center justify-center'>Dimanche</div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>L<span className='hidden md:flex'>undi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>M<span className='hidden md:flex'>ardi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>M<span className='hidden md:flex'>ercredi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>J<span className='hidden md:flex'>eudi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>V<span className='hidden md:flex'>endredi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>S<span className='hidden md:flex'>amedi</span></div>
+          <div className='flex flex-row text-xs border border-black py-2 px-4 rounded-lg items-center justify-center'>D<span className='hidden md:flex'>imanche</span></div>
 
         </div>
 
         <div className={`grid grid-cols-7 px-4 gap-4 text-black text-center`}>
 
           {[...Array(getNbJours(date))].map((e,i)=>
-            <p key={i} className='text-xs bg-gray-200 py-2 px-4 rounded-lg h-10'>{i}</p>
+            <p key={i} className='text-xs bg-gray-200 py-2 px-4 rounded-lg'></p>
           )}
 
         </div>
 
       </div>
 
+      {/* <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
@@ -73,8 +78,9 @@ export default function Home() {
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
       <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
-      <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
-      <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p>
+      <p>sc svdkjsnvdjsndvkns sod nsod no i oihoihoiho ihoihoiho ihoih oihoihiuhigyt-(r-f iuittu uhgiuhiug uiyu</p> */}
+
+      <Footer/>
 
     </div>
 
