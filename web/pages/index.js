@@ -46,7 +46,7 @@ export default function Home() {
         <div className={`grid grid-cols-7 px-4 gap-4 text-black text-center`}>
 
           {[...Array(getNbJours(date))].map((e,i)=>
-            <p className='text-xs bg-gray-200 py-2 px-4 rounded-lg h-10'></p>
+            <p key={i} className='text-xs bg-gray-200 py-2 px-4 rounded-lg h-10'>{i}</p>
           )}
 
         </div>
