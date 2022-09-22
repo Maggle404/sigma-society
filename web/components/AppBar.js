@@ -11,6 +11,7 @@ export default function AppBar() {
             <div className="flex flex-row gap-4">
                 <Button content={`Contact`} link={`/contact`}/>
                 <Button content={`Voter`} link={`/voter`}/>
+                <Button content={`Connexion`} link={`/connect`}/>
             </div>
         </nav>
     )
